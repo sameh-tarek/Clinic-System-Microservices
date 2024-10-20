@@ -30,4 +30,5 @@ Each service is independent and has its own responsibilities. Services communica
 
 ### Eureka Server:
 - **Eureka Server** acts as the service registry. Each service registers itself to **Eureka** for discovery, making it easier for services to communicate dynamically without hardcoded IP addresses.
+![Screenshot (1174)](https://github.com/user-attachments/assets/748c81e2-bae1-4265-a43d-32dc32d62196)
 
