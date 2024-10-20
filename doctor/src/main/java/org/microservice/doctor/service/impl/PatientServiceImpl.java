@@ -1,5 +1,6 @@
 package org.microservice.doctor.service.impl;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.microservice.doctor.model.dto.AddPatientDTO;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class PatientServiceImpl implements PatientService {
     private final PatientProxy patientProxy;
 
+    @CircuitBreaker(name = "getPatientInstance", fallbackMethod = "getDefaultPatient")
     @Override
     public PatientDTO getPatientById(Long id) {
         log.info("getting patient details for patient id: {}", id);
@@ -29,5 +31,13 @@ public class PatientServiceImpl implements PatientService {
                 .patientAge(patientDTO.getPatientAge())
                 .build();
         return patientProxy.addPatient(addPatientDTO);
+    }
+
+    public PatientDTO getDefaultPatient (Exception e) {
+        return PatientDTO.builder()
+                .patientName("UNKNOWN PATIENT")
+                .id(0L)
+                .patientAge(0)
+                .build();
     }
 }

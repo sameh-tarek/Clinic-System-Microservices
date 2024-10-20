@@ -20,4 +20,5 @@ public class PatientController {
     public AddPatientDTO addPatient (@RequestBody AddPatientDTO patientDTO) {
         return patientService.addPatient(patientDTO);
     }
+
 }
