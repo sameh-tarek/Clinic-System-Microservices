@@ -42,3 +42,14 @@ Each service is independent and has its own responsibilities. Services communica
   - Service up/down status.
   - Metrics like memory, CPU usage, and heap space.
   - Service logs, thread dumps, and more.
+  
+  ![Screenshot (1175)](https://github.com/user-attachments/assets/38b88e9e-8895-49ba-9717-263dec9b92d4)
+
+  ![Screenshot (1176)](https://github.com/user-attachments/assets/269969ce-6793-4112-a84f-27154f00a760)
+
+  ![Screenshot (1177)](https://github.com/user-attachments/assets/dc6245d5-14d8-4a3f-8557-b55603b70c40)
+
+  ![Screenshot (1178)](https://github.com/user-attachments/assets/84778165-4b2c-464d-8350-1377ef8756de)
+
+
+
