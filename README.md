@@ -9,6 +9,8 @@ This project is built using **Spring Boot Microservices Architecture**. It consi
 - **API Gateway**: Acts as a single entry point for all client requests and routes them to the appropriate service.
 - **Eureka Server**: Service registry for discovering services.
 - **Admin Server**: Monitors the status and health of the microservices.
+- **Resilience4j Circuit Breaker**: Provides fault tolerance and resilience for microservices by implementing the circuit breaker pattern.
+
 
 ## Tech Stack
 - **Java 17**
@@ -18,6 +20,7 @@ This project is built using **Spring Boot Microservices Architecture**. It consi
   - **Spring Cloud Netflix Eureka** for service discovery.
   - **Spring Cloud OpenFeign** for inter-service communication.
   - **Spring Boot Admin Server** for monitoring microservices.
+  - **Resilience4j** for circuit breaker and resilience patterns.
 
 ## Microservices Architecture
 Each service is independent and has its own responsibilities. Services communicate using HTTP REST APIs via Feign clients. The **Eureka Server** enables dynamic service discovery.
@@ -52,4 +55,11 @@ Each service is independent and has its own responsibilities. Services communica
   ![Screenshot (1178)](https://github.com/user-attachments/assets/84778165-4b2c-464d-8350-1377ef8756de)
 
 
+### Resilience4j & Circuit Breaker
+This project uses **Resilience4j** for fault tolerance and resilience. The **Circuit Breaker** pattern is implemented to prevent failures from cascading across the microservices when dependent services are down or experiencing high latency.
 
+#### Circuit Breaker Configuration:
+- **Failure Rate Threshold**: If 50% of the requests fail, the circuit will open.
+- **Wait Duration in Open State**: The circuit will remain open for 3 seconds before transitioning to half-open.
+- **Permitted Calls in Half-Open State**: 2 calls are allowed to test if the underlying service is up.
+- **Sliding Window Type**: The failure rate is calculated based on a count of 10 recent calls.
