@@ -5,10 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class PaymentDTO {
     private Long id;
     private String tranId;

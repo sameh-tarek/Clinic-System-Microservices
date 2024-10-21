@@ -26,11 +26,14 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     public AddPatientDTO addPatient(AddPatientDTO patientDTO) {
+        log.info("adding patient with details: {}", patientDTO);
         AddPatientDTO addPatientDTO = AddPatientDTO.builder()
                 .patientName(patientDTO.getPatientName())
                 .patientAge(patientDTO.getPatientAge())
                 .build();
-        return patientProxy.addPatient(addPatientDTO);
+        AddPatientDTO save = patientProxy.addPatient(addPatientDTO);
+        log.info("successfully added patient details {}", addPatientDTO);
+        return save;
     }
 
     public PatientDTO getDefaultPatient (Exception e) {
