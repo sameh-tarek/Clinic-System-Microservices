@@ -63,3 +63,6 @@ This project uses **Resilience4j** for fault tolerance and resilience. The **Cir
 - **Wait Duration in Open State**: The circuit will remain open for 3 seconds before transitioning to half-open.
 - **Permitted Calls in Half-Open State**: 2 calls are allowed to test if the underlying service is up.
 - **Sliding Window Type**: The failure rate is calculated based on a count of 10 recent calls.
+  
+ ![Screenshot (1179)](https://github.com/user-attachments/assets/d7d6c048-3c26-4b3e-9a8a-049defe9f09b)
+
