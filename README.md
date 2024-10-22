@@ -71,3 +71,9 @@ This project uses **Resilience4j** for fault tolerance and resilience. The **Cir
 ### Docker & Kubernetes:
 - **Docker** is used to containerize each microservice, ensuring consistency across environments and simplifying deployment.
 - **Kubernetes** is used for managing and orchestrating the microservices. It automates deployment, scaling, and management of containerized applications.
+
+![Screenshot (1183)](https://github.com/user-attachments/assets/b674c33c-5181-4369-88f7-53b7132fa107)
+![Screenshot (1184)](https://github.com/user-attachments/assets/6ba66766-ea21-42ef-97a5-a0ad7989a9d7)
+![Screenshot (1185)](https://github.com/user-attachments/assets/4f85ea6c-5de3-441c-9cfe-5d0072d19596)
+![Screenshot (1182)](https://github.com/user-attachments/assets/6bea2f60-3101-476e-9c92-39eb173da697)
+
