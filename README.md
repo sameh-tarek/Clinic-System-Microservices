@@ -1,5 +1,7 @@
 # Clinic System Microservices Project
 
+![microservices-6-dark](https://github.com/user-attachments/assets/5cd5af7c-a10d-4003-bef4-38bad1d74ac7)
+
 ## Overview
 This project is built using **Spring Boot Microservices Architecture**. It consists of the following services:
 
