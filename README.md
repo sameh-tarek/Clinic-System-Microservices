@@ -21,6 +21,8 @@ This project is built using **Spring Boot Microservices Architecture**. It consi
   - **Spring Cloud OpenFeign** for inter-service communication.
   - **Spring Boot Admin Server** for monitoring microservices.
   - **Resilience4j** for circuit breaker and resilience patterns.
+- **Docker** for containerizing microservices.
+- **Kubernetes** for orchestrating microservices.
 
 ## Microservices Architecture
 Each service is independent and has its own responsibilities. Services communicate using HTTP REST APIs via Feign clients. The **Eureka Server** enables dynamic service discovery.
@@ -66,3 +68,6 @@ This project uses **Resilience4j** for fault tolerance and resilience. The **Cir
   
  ![Screenshot (1179)](https://github.com/user-attachments/assets/d7d6c048-3c26-4b3e-9a8a-049defe9f09b)
 
+### Docker & Kubernetes:
+- **Docker** is used to containerize each microservice, ensuring consistency across environments and simplifying deployment.
+- **Kubernetes** is used for managing and orchestrating the microservices. It automates deployment, scaling, and management of containerized applications.

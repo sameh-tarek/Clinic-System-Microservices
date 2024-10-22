@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doctor-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: doctor-app
+  template:
+    metadata:
+      labels:
+        app: doctor-app
+    spec:
+      containers:
+        - name: doctor-app-container
+          image: sameh1t/doctor-img
